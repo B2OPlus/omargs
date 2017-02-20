@@ -18,6 +18,7 @@
 
 package org.b2oplus.omargs
 
+import org.junit.Assert
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -28,7 +29,7 @@ import org.junit.Assert.*
 class OptionTest {
     @Test
     fun getOpt() {
-
+        Assert.assertEquals("Hello", Option("Hello").opt)
     }
 
     @Test
