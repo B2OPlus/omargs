@@ -25,7 +25,7 @@ import org.b2oplus.omargs.Option
  */
 class OptionBuilder {
 
-    private val option: Option = Option()
+    private val option: Option = Option("")
 
     infix fun argName(arg: String): OptionBuilder {
         return this

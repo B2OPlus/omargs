@@ -23,8 +23,8 @@ package org.b2oplus.omargs
  */
 class Option {
 
-    var opt: String? = ""
-    val longOpt: String? = ""
+    var opt: String = ""
+    val longOpt: String = ""
 
     constructor(opt: String){
         this.opt = opt

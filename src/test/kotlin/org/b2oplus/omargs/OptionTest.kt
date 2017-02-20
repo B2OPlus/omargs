@@ -21,8 +21,6 @@ package org.b2oplus.omargs
 import org.junit.Assert
 import org.junit.Test
 
-import org.junit.Assert.*
-
 /**
  * Created by abuabdul
  */
