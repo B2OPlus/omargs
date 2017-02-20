@@ -83,6 +83,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <kotlin.version>1.0.6</kotlin.version>
         <junit.version>4.12</junit.version>
+        <surefire-version>2.19</surefire-version>
     </properties>
 
     <dependencies>
@@ -136,6 +137,24 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>2.6</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${surefire-version}</version>
+                <configuration>
+                    <forkMode>once</forkMode>
+                    <useSystemClassLoader>false</useSystemClassLoader>
+                    <useManifestOnlyJar>false</useManifestOnlyJar>
+                    <failIfNoTests>false</failIfNoTests>
+                    <includes>
+                        <include>**/*Test.*</include>
+                    </includes>
+                    <excludes>
+                    </excludes>
+                    <systemProperties>
+                        <project.version>${project.version}</project.version>
+                    </systemProperties>
+                </configuration>
             </plugin>
         </plugins>
     </build>

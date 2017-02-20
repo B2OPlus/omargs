@@ -1,0 +1,14 @@
+language: java
+
+jdk:
+  - oraclejdk8
+
+sudo: false
+
+cache:
+  directories:
+  - $HOME/.m2
+
+install: /bin/true
+
+script: mvn test
